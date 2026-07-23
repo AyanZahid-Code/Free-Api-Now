@@ -45,7 +45,7 @@ OpenAI-compatible upstream by changing `upstreamBase` / `upstreamPath` in the co
 
 ```sh
 set ANTHROPIC_BASE_URL=http://127.0.0.1:8787
-set ANTHROPIC_AUTH_TOKEN=<your upstream key>   # or ANTHROPIC_API_KEY
+set ANTHROPIC_AUTH_TOKEN=<your freetheai api key>   # or ANTHROPIC_API_KEY
 claude
 ```
 
