@@ -1,0 +1,13 @@
+{
+  "name": "claude-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local proxy that exposes freetheai.xyz/v1 as the Anthropic API for Claude Code",
+  "main": "proxy.js",
+  "scripts": {
+    "start": "node proxy.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

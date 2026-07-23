@@ -1,0 +1,44 @@
+{
+  "_comment": "Copy to config.json and edit. Auth is NOT stored here — the proxy passes through x-api-key / Authorization from the client (set ANTHROPIC_AUTH_TOKEN / OPENAI_API_KEY in your environment).",
+  "listenHost": "127.0.0.1",
+  "listenPort": 8787,
+  "upstreamBase": "https://api.freetheai.xyz",
+  "upstreamPath": "/v1",
+  "defaultModel": "glm/glm-5.2",
+  "modelMapping": {
+    "claude-opus-4-8": "glm/glm-5.2",
+    "claude-opus-4-7": "glm/glm-5.2",
+    "claude-opus-4-6": "glm/glm-5.2",
+    "claude-opus-4-5-20251101": "glm/glm-5.2",
+    "claude-opus-4-1-20250805": "glm/glm-5.2",
+    "claude-opus-4-20250514": "glm/glm-5.2",
+    "claude-sonnet-4-6": "glm/glm-5.2",
+    "claude-sonnet-4-5-20250929": "glm/glm-5.2",
+    "claude-sonnet-4-20250514": "glm/glm-5.2",
+    "claude-3-7-sonnet-20250219": "glm/glm-5.2",
+    "claude-3-5-sonnet-20241022": "glm/glm-5.2",
+    "claude-haiku-4-5-20251001": "glm/glm-5.2",
+    "claude-3-5-haiku-20241022": "glm/glm-5.2",
+    "claude-3-opus-20240229": "glm/glm-5.2"
+  },
+  "retry": {
+    "maxAttempts": 6,
+    "backoffMs": 1500,
+    "maxBackoffMs": 30000,
+    "jitterMs": 800,
+    "retryOnStatus": [408, 409, 425, 429, 500, 502, 503, 504],
+    "retryOnBodyPatterns": [
+      "rate limit", "rate_limit", "ratelimit",
+      "overloaded", "overload",
+      "temporarily unavailable", "temporarily_unavailable",
+      "service unavailable", "service_unavailable",
+      "try again", "please try again",
+      "capacity", "busy", "timeout", "timed out",
+      "upstream error", "bad gateway", "internal error",
+      "provider error", "connection reset", "connection refused",
+      "ECONNRESET", "ECONNREFUSED", "ETIMEDOUT", "EAI_AGAIN"
+    ]
+  },
+  "rewriteResponseModel": true,
+  "logLevel": "info"
+}
