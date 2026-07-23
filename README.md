@@ -53,7 +53,7 @@ claude
 
 ```sh
 set OPENAI_BASE_URL=http://127.0.0.1:8787/v1
-set OPENAI_API_KEY=<your upstream key>
+set OPENAI_API_KEY=<your freetheai api key>
 ```
 
 Point any OpenAI-compatible tool at `http://127.0.0.1:8787/v1` and call
